@@ -1,6 +1,6 @@
-# Fedora Docs Template
+# Fedora Kinoite Documentation
 
-This repository contains a minimal source structure for a new Fedora Docs source.
+This repository contains the Fedora Kinoite documentation.
 
 ## Structure
 

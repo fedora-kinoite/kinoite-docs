@@ -1,7 +1,89 @@
 = Frequently Asked Questions (FAQ)
 
-[qanda]
-Can I see a built preview of this template to get a better idea about the result?::
-    Of course you can! Just look at the README of the repository — it should tell you everything.
-Is writing documentation hard and dreadful?::
-    Absolutely not. Writing documentation in asciidoc is very simple and straightforward. And in fact, writing documentation makes you very happy. Just try and see for yourself!
+== About the project
+
+Why is this project named Kinoite?::
+
+We chose the Kinoite name for the following reasons:
+* KDE based projects traditionally start with a 'K'
+* Kinoite is a blue mineral (https://en.wikipedia.org/wiki/Kinoite[Wikipedia]), thus referring to both the 'silver' and 'blue' part of Silverblue and the blue color of the KDE logo.
+* "Kinoite" means "There is a tree" in Japanese (https://translate.google.com/?sl=auto&tl=en&text=kinoite&op=translate[Google Translate]), thus referring to the 'tree' in 'ostree'.
+
+What is Kinoite's relationship with Silverblue and Fedora CoreOS?::
+
+Fedora Kinoite uses the same core technology as Fedora Silverblue and Fedora CoreOS. However, Kinoite is specifically focused on workstation/desktop use cases with the KDE Plasma desktop.
+
+== About using Kinoite
+
+How can I play more videos in Firefox, like YouTube?::
+
+Firefox is included in the OS image for now. Until that changes, getting it to play videos works the same way as it does for the regular Fedora Workstation: find a package with the needed codecs, and install it. The one difference is that you use `rpm-ostree install` instead of `dnf install`. An alternative solution is to install the nightly Firefox, which is available as a https://firefox-flatpak.mojefedora.cz/org.mozilla.FirefoxNightly.flatpakref[Flatpak].
+
+How do I create a VPN connection?::
+
+`/etc` is not part of the immutable OS image, so you can just copy files into `/etc/NetworkManager/system-connections` (or let NetworkManager store them there when you recreate your connections). Certificates in `/etc/pki` need to be handled similarly.
+
+How can I see what packages were updated between two commits?::
+
+* If you want to compare the booted deployment with the pending deployment (or
+* rollback deployment), simply issue:
+
+ $ rpm-ostree db diff
++
+TIP: You can also see the RPM changelog by adding the `-c` option like so: `rpm-ostree db diff -c`
+
+* If you want to see which packages were updated between two specific commits:
+
+. find out which two commits you want to compare by issuing:
+
+ $ ostree log <ref>
+
+. you can now compare the two commits by issuing:
+
+ $ rpm-ostree db diff <commit x> <commit y>
+
+How can I check the version number of an installed package?::
+
+You can simply use:
+
+ $ rpm -q <package>
+
+How can I check if an `rpm` software package is available in the repository?::
+
+At this point in time, there is no `rpm` package search function built into `rpm-ostree`. However, you can use `toolbox` with the following command:
+
+ $ toolbox run dnf search <package>
++
+NOTE: The assumption is that you have already created a toolbox matching the version of your Fedora Kinoite installation.
+
+How can I downgrade my system's kernel?::
+
+If, for whatever reason, you need to downgrade the kernel, you can do so by following these steps:
+
+. For the version you need to downgrade, download `<kernel>`, `<kernel-core>`, `<kernel-modules>` and `<kernel-modules-extra>` from https://koji.fedoraproject.org/koji/packageinfo?packageID=8[Koji].
+
+. Install the packages downloaded on the previous step by issuing:
+
+ $ rpm-ostree override replace <kernel> <kernel-core> <kernel-modules> <kernel-modules-extra>
+
+. Reboot the system to apply the changes.
+
+How can I upgrade my system to the next major version (for instance: rawhide or an upcoming Fedora release branch), while keeping my current deployment?::
+
+OSTree allows you to pin deployments (pinning ensures that your deployment of choice is kept and not discarded).
+
+. Assuming that you want to keep your default deployment, issue the following command:
+
+ $ sudo ostree admin pin 0
++
+NOTE: `0` here refers to the first deployment listed by `rpm-ostree status`
+
+. Verify that you have pinned your deployment of choice by issuing:
+
+ rpm-ostree status
+
+. After the deployment is pinned, you can upgrade your system by using the instructions found https://docs.fedoraproject.org/en-US/fedora-silverblue/updates-upgrades-rollbacks/#upgrading[here].
+
+. When you have completed rebasing, reboot the system. The GRUB menu will now present you with both: the previous deployment major version entry (e.g.: *"Fedora 30.YYYYMMDD.n"*) and the new deployment major version entry (e.g.: *"Fedora 31.YYYYMMDD.n"*).
++
+NOTE: At the moment it is not possible to name (pinned) deployments and their associated GRUB menu entries.

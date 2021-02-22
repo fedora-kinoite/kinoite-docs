@@ -1,0 +1,60 @@
+[[contributing]]
+= Contributing to Fedora kinoite
+
+Help us improve Fedora Kinoite by contributing to the project!
+
+[[developing]]
+== Developing Kinoite
+
+If you are a developer, you can contribute to one of the several projects which make Fedora Kinoite possible. Submit your pull requests to:
+
+* https://github.com/projectatomic/rpm-ostree[rpm-ostree]
+* https://github.com/flatpak/flatpak[flatpak]
+* https://github.com/ostreedev/ostree[ostree]
+* https://github.com/containers/toolbox[toolbox]
+* https://github.com/containers/libpod[podman]
+
+Your contributions towards the main https://fedoraproject.org/wiki/Join[Fedora] and https://community.kde.org/Get_Involved[KDE] projects are also very welcome.
+
+[[writing-documentation]]
+== Writing Documentation
+
+Creating or modifying documentation is easy. Head over to our https://pagure.io/fedora-kde/kinoite-docs[documentation] repository, fork it and create a pull request.
+
+If you are not comfortable with using git, create a new topic in our https://discussion.fedoraproject.org/c/desktop/silverblue[community] or log an https://pagure.io/fedora-kde/kinoite-docs/issues[issue] describing what need to be changed.
+
+[[writing-conventions]]
+=== Writing Conventions
+
+When creating documentation, please follow these writing conventions:
+
+* Code blocks for commands that require `root` privileges must show the `#`
+* prompt symbol. Example:
+
+ # dnf install <package>
++
+The `$` user prompt symbol can also be used but you must prefix the command with `sudo`. Example:
+
+ $ sudo dnf install <package>
+
+[[reporting-issues]]
+== Reporting Issues
+
+You can report bugs and suggest features or improvements on the https://pagure.io/fedora-kde/SIG[KDE SIG issue tracker].
+
+[[creating-flatpaks]]
+== Creating Flatpaks
+
+Your favourite application is not in the default repository and won't probably be added? You can do it yourself! Go through our tutorial for creating flatpaks from rpm packages:
+
+* https://docs.fedoraproject.org/en-US/flatpak/tutorial/[RPM to Flatpak tutorial]
+
+To become an official packager you need to go through several steps to gain all required permissions to use the Fedora infrastructure (Pagure, Koji, Bodhi).
+There is a detailed https://fedoraproject.org/wiki/Join_the_package_collection_maintainers[wiki page] about becoming a packager.
+
+Other useful links:
+
+* https://pagure.io[Pagure]
+* https://src.fedoraproject.org[Package Sources]
+* https://koji.fedoraproject.org/koji/[Koji]
+* https://bodhi.fedoraproject.org/[Bodhi]
