@@ -35,12 +35,12 @@ hazards involved in both cases, and you should only attempt to use these
 features if you have done the necessary research, and are confident that you
 can overcome any issues that you might encounter.
 
-[[getting-silverblue]]
+[[getting-kinoite]]
 == Getting Kinoite
 
 If you are using Fedora Media Writer, Kinoite should be listed as a download
 option. However, if it isn't, or if you want to download it manually, an
-install image can be downloaded from https://silverblue.fedoraproject.org/[the
+install image can be downloaded from https://kinoite.fedoraproject.org/[the
 main Kinoite website].
 
 Once you have got your copy of Kinoite, it can be installed in the usual
