@@ -5,24 +5,18 @@ This repository contains the Fedora Kinoite documentation.
 ## Structure
 
 ```
-|-- README.md
-|-- antora.yml ....................... 1.
-|-- build.sh ......................... 2.
-|-- preview.sh ....................... 3.
-|-- site.yml ......................... 4.
-`-- modules
-    `-- ROOT ......................... 5.
-        |-- assets
-        |   `-- images ............... 6.
-        |       `-- pizza.png
-        |-- nav.adoc ................. 7.
-        `-- pages .................... 8.
-            |-- architecture.adoc
-            |-- community.adoc
-            |-- faq.adoc
-            |-- index.adoc
-            |-- pizza-dough.adoc
-            `-- pizza-oven.adoc
+├── README.md
+├── antora.yml ....................... 1.
+├── build.sh ......................... 2.
+├── preview.sh ....................... 3.
+├── site.yml ......................... 4.
+└── modules
+    └── ROOT ......................... 5.
+        ├── assets
+        │   └── images ............... 6.
+        ├── nav.adoc ................. 7.
+        └── pages .................... 8.
+            └── ...
 ```
 
 1. Metadata definition.
