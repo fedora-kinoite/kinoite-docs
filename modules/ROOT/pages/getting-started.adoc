@@ -41,15 +41,14 @@ https://flatpak.org/setup/Fedora/[Flathub setup page for Fedora] and click the
 image::sfg_flathub_fedora.png[title="Fedora quick setup page"]
 
 A popup window will show a download option for the file. The “Open with” option
-should show “Software Install (default)”. Click on the “OK” button to start the 
+should show “Discover (default)”. Click on the “OK” button to start the 
 download.
 
 image::sfg_flathub_download.png[title="Flathub download options"]
 
 After the download is complete, a new window will open showing the Flathub
-repository. This window also shows the source location of the repository to be
-installed, under the details heading (1). To start the installation of the
-Flathub repository, click on the “Install” button (2).
+repository. To start the installation of the Flathub repository, click on 
+the “Install” button (1). You will need to authenticate in the following window to proceed with the installation.
 
 image::sfg_flathub_install.png[title="Flathub install window"]
 
@@ -66,8 +65,7 @@ If you choose to install apps from the Flathub website, clicking "Install" will
 download a file which will be opened by the Software app, which can then be
 used to install the app. For example, to install
 https://www.libreoffice.org/[LibreOffice], you first search for and open the
-LibreOffice page, and then press the “Install” button 
-(2). 
+LibreOffice page, and then press the “Install” button. 
 
 After clicking the “Install” button, a download information window will be
 shown. Verify the correct Flatpak has been downloaded and then click on the
@@ -75,8 +73,8 @@ shown. Verify the correct Flatpak has been downloaded and then click on the
 
 image::sfg_libreoffice_install.png[title="LibreOffice Flatpak download"]
 
-Once the Flatpak is downloaded, the Software application will open a new window
-with an “Install” button (2). Click this button to begin installation.
+Once the Flatpak is downloaded, the Discover application will open a new window
+with an “Install” button. Click this button to begin installation.
 
 === Flatpak command line
 
