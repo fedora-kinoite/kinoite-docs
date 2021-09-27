@@ -6,9 +6,11 @@ This page is a list of further reading and resources for Kinoite.
 
 * https://buildah.io/[Buildah] - build OCI container images
 * http://flatpak.org[Flatpak] - next-generation desktop app framework
-* https://ostreedev.github.io/ostree/[ostree] - OS image composition and updates
+* https://ostreedev.github.io/ostree/[ostree] - OS image composition and
+  updates
 * https://podman.io/[podman] - daemonless container engine
-* https://coreos.github.io/rpm-ostree/[rpm-ostree] - hybrid image/package system
+* https://coreos.github.io/rpm-ostree/[rpm-ostree] - hybrid image/package
+  system
 
 == Documents
 

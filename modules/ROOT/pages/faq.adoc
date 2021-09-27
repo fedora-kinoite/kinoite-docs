@@ -9,9 +9,9 @@ We chose the Kinoite name for the following reasons:
 * Kinoite is a blue mineral (https://en.wikipedia.org/wiki/Kinoite[Wikipedia]), thus referring to both the 'silver' and 'blue' part of Silverblue and the blue color of the KDE logo.
 * "Kinoite" means "There is a tree" in Japanese (https://translate.google.com/?sl=auto&tl=en&text=kinoite&op=translate[Google Translate]), thus referring to the 'tree' in 'ostree'.
 
-What is Kinoite's relationship with Silverblue and Fedora CoreOS?::
+What is Fedora Kinoite's relationship with Fedora Silverblue, Fedora IoT and Fedora CoreOS?::
 
-Fedora Kinoite uses the same core technology as Fedora Silverblue and Fedora CoreOS. However, Kinoite is specifically focused on workstation/desktop use cases with the KDE Plasma desktop.
+Fedora Kinoite uses the same core technology as Fedora Silverblue, Fedora IoT and Fedora CoreOS. However, Kinoite is specifically focused on workstation/desktop use cases with the KDE Plasma desktop.
 
 == About using Kinoite
 
@@ -25,8 +25,7 @@ How do I create a VPN connection?::
 
 How can I see what packages were updated between two commits?::
 
-* If you want to compare the booted deployment with the pending deployment (or
-* rollback deployment), simply issue:
+* If you want to compare the booted deployment with the pending deployment (or rollback deployment), simply issue:
 
  $ rpm-ostree db diff
 +

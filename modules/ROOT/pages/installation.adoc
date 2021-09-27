@@ -30,7 +30,7 @@ installation or booted from a flash drive using Fedora Media Writer.
 manual partitioning.*
 
 It is possible to make Kinoite work for both dual boot and manual partitioning,
-and some guidance is provided on manual partitioning below.  However, there are
+and some guidance is provided on manual partitioning below. However, there are
 hazards involved in both cases, and you should only attempt to use these
 features if you have done the necessary research, and are confident that you
 can overcome any issues that you might encounter.
@@ -40,8 +40,8 @@ can overcome any issues that you might encounter.
 
 If you are using Fedora Media Writer, Kinoite should be listed as a download
 option. However, if it isn't, or if you want to download it manually, an
-install image can be downloaded from https://kinoite.fedoraproject.org/[the
-main Kinoite website].
+install image can be downloaded from
+https://kinoite.fedoraproject.org/[the main Kinoite website].
 
 Once you have got your copy of Kinoite, it can be installed in the usual
 manner. We hope that you love it!
@@ -52,7 +52,7 @@ manner. We hope that you love it!
 As described above, there are known issues with manual partitioning on Kinoite,
 and it should be used with caution. The following notes are intended as hints
 for those attempting it, and should not be treated as recommended practice.
-	Automatic partitioning is recommended.
+Automatic partitioning is recommended.
 
 With Kinoite, only certain mounts can be manually specified as partitions.
 These include:

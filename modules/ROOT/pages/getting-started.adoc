@@ -18,7 +18,7 @@ include:
 
 For information on <<flatpak>> and <<package-layering,package layering>>, see below.
 
-See the dedicated <<toolbox.adoc#toolbox,toolbox>> page to get started with it.
+See the dedicated xref:toolbox.adoc[toolbox] page to get started with it.
 
 [[flatpak]]
 == Flatpak
@@ -47,8 +47,9 @@ download.
 image::sfg_flathub_download.png[title="Flathub download options"]
 
 After the download is complete, a new window will open showing the Flathub
-repository. To start the installation of the Flathub repository, click on 
-the “Install” button (1). You will need to authenticate in the following window to proceed with the installation.
+repository. To start the installation of the Flathub repository, click on the
+“Install” button (1). You will need to authenticate in the following window to
+proceed with the installation.
 
 image::sfg_flathub_install.png[title="Flathub install window"]
 
@@ -65,7 +66,7 @@ If you choose to install apps from the Flathub website, clicking "Install" will
 download a file which will be opened by the Software app, which can then be
 used to install the app. For example, to install
 https://www.libreoffice.org/[LibreOffice], you first search for and open the
-LibreOffice page, and then press the “Install” button. 
+LibreOffice page, and then press the “Install” button.
 
 After clicking the “Install” button, a download information window will be
 shown. Verify the correct Flatpak has been downloaded and then click on the
@@ -101,13 +102,15 @@ Kinoite using this method.
 Currently, using package layering creates a new "deployment", or bootable
 filesystem root.  It does not affect your current root.  This preserves
 rollback and the transactional model, but means that the system must be
-rebooted after a package has been layered.  Eventually this limitation may be
-lifted, but it's generally expected that you use package layering sparingly,
-and use `flatpak` and `dnf install` inside a `toolbox` etc.
+rebooted after a package has been layered. If you don't want to reboot your
+system for switching to the new deployment, you can use an experimental
+`rpm-ostree ex apply-live` command to update the filesystem to see changes from
+new deployment, but it's generally expected that you use package layering
+sparingly, and use `flatpak` and `dnf install` inside a `toolbox` etc.
 
-Package layering is generally done from the command line. However, the Software
-application does rely on it for installing a small number of apps that are
-currently difficult to install as Flatpaks.
+Package layering is generally done from the command line. A small number of
+apps are currently difficult to install as Flatpaks and should be installed
+this way until support is added in Discover.
 
 === Installing packages
 
@@ -118,7 +121,7 @@ Packages can be installed on Kinoite using:
 This will download the package and any required dependencies, and recompose
 your Kinoite image with them. `rpm-ostree` uses standard Fedora package
 names, which can be searched using DNF (this is not available on a Kinoite
-host, but can be used in a link:toolbox[toolbox]).
+host, but can be used in a xref:toolbox.adoc[toolbox]).
 
 Once a package has been installed in this manner, it will be kept up-to-date as
 new versions are released and as the base operating system is updated.
@@ -127,10 +130,15 @@ new versions are released and as the base operating system is updated.
 
 In some scenarios, you may want to test out a new version of `podman` or
 `kernel` or other packages that live on the host.  The `rpm-ostree override`
-command can be used to replace a package with a different version.  Currently
-you must download the RPM packages locally, and then run:
+command can be used to replace a package with a different version. You can
+download the package locally and run:
 
  $ rpm-ostree override replace <path to package>
+
+Or you can override packages without downloading using links from koji or
+bodhi. For example:
+
+ $ rpm-ostree override replace https://kojipkgs.fedoraproject.org//packages/podman/3.1.2/1.fc34/x86_64/podman-3.1.2-1.fc34.x86_64.rpm https://kojipkgs.fedoraproject.org//packages/podman/3.1.2/1.fc34/x86_64/podman-plugins-3.1.2-1.fc34.x86_64.rpm
 
 You may also use `override remove` to effectively "hide" packages; they will
 still exist in the underlying base layer, but will not appear in the booted
