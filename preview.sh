@@ -11,15 +11,15 @@ container_launch() {
 
     elif hash docker 2>/dev/null; then
 
-    if groups | grep -wq "docker"; then
+        if groups | grep -wq "docker"; then
             echo "Docker is launching the preview in an isolated environment."
-        echo "The preview will be available at http://localhost:8080/"
+            echo "The preview will be available at http://localhost:8080/"
             docker $1
 
         else
             echo "This preview script is using $runtime to run the preview in an isolated environment. You might be asked for your password."
             echo "You can avoid this by adding your user to the 'docker' group, but be aware of the security implications. See https://docs.docker.com/install/linux/linux-postinstall/."
-        echo "The preview will be available at http://localhost:8080/"
+            echo "The preview will be available at http://localhost:8080/"
             sudo docker $1
         fi
 

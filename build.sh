@@ -21,9 +21,9 @@ container_launch() {
         fi
 
     else
-    echo "Error: No container runtimes were found."
-    echo "Please install either podman or docker"
-    exit 1
+        echo "Error: No container runtimes were found."
+        echo "Please install either podman or docker"
+        exit 1
     fi
 }
 
