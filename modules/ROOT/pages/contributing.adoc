@@ -1,5 +1,5 @@
 [[contributing]]
-= Contributing to Fedora kinoite
+= Contributing to Fedora Kinoite
 
 Help us improve Fedora Kinoite by contributing to the project!
 
