@@ -48,3 +48,15 @@ The primary audience for these docs are new users, who aren't expected to have
 specialist knowledge or technical knowledge about Kinoite's internals. However,
 some background link:technical-information[technical information] is provided,
 for those who are interested and want to learn more.
+
+[[known-bugs]]
+== Known bugs
+
+Fedora Kinoite is considered stable since its first release as part of Fedora
+35. However it is not complete and there are still some features missing to
+make using it a great user experience.
+
+A list of currently known bugs, issues and missing features is compiled in the
+https://pagure.io/fedora-kde/SIG/issue/112[KDE SIG tracker]. Feel free to open
+a new one if you find something missing or broken.
+
