@@ -8,17 +8,11 @@ goes wrong.
 [[updating]]
 == Updating Kinoite
 
-OS updates in Kinoite are fully integrated into the desktop; you will be
-automatically notified when an update is available. The standard behavior is to
-automatically download the update (this can be changed from the update
-preferences in Software).
+OS updates in Kinoite are not yet integrated into Discover (see progress in
+https://pagure.io/fedora-kde/SIG/issue/133[issue 133]).
 
-Once an update is ready, it is just a matter of rebooting to start using the
-new version. There is no waiting for the update to be installed during this
-reboot.
-
-If you'd prefer, it is also possible to update using the command line. To do
-this, run:
+Until support is fully implemented, you will have to update using the command
+line. To do this, run:
 
  $ rpm-ostree upgrade
 
@@ -31,23 +25,25 @@ them, run:
 [[upgrading]]
 == Upgrading between major versions
 
-Upgrading between major versions (such as from Fedora 32 to Fedora 33) can  be
-completed using the Software application. Alternatively, Kinoite can be
-upgraded between major versions using the `ostree` command.
+Upgrading between major versions (such as from Fedora 35 to Fedora 36) can not
+yet be completed using Discover.
+
+Until support is fully implemented, you will have to upgrade to a new major
+versions using the command line.
 
 First, verify the branch is available. You can print all available branches
 with this command:
 
- $ ostree remote refs fedora
+ $ ostree remote refs fedora | grep kinoite
 
 After you verify the name of your branch, you are ready to proceed. For
-example, to upgrade to Kinoite 33, the command is:
+example, to upgrade to Kinoite 36, the command is:
 
 NOTE: Currently, the default remote for Kinoite 35 is named `fedora`. If this
 is not the case for your system, you can find out the remote name by issuing:
 `ostree remote list`.
 
- $ rpm-ostree rebase fedora:fedora/35/x86_64/kinoite
+ $ rpm-ostree rebase fedora:fedora/36/x86_64/kinoite
 
 The process is very similar to a system update: the new OS is downloaded and
 installed in the background, and you just boot into it when it is ready.
