@@ -23,6 +23,17 @@ meets the specific needs or requirements that you might have. If you are
 uncertain about this, Kinoite can also be tested in a virtual machine prior to
 installation or booted from a flash drive using Fedora Media Writer.
 
+[[known-bugs]]
+== Known bugs
+
+Fedora Kinoite is considered stable since its first release as part of Fedora
+35. However it is not complete and there are still some features missing to
+make using it a great user experience.
+
+A list of currently known bugs, issues and missing features is compiled in the
+https://pagure.io/fedora-kde/SIG/issue/112[KDE SIG tracker]. Feel free to open
+a new one if you find something missing or broken.
+
 [[known-limitations]]
 == Known limitations
 
