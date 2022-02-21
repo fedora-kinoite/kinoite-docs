@@ -1,6 +1,6 @@
 = Reading & Resources
 
-This page is a list of further reading and resources for Kinoite.
+This page is a list of further reading and resources for {variant-name}.
 
 == Technology websites and documentation
 
@@ -15,5 +15,5 @@ This page is a list of further reading and resources for Kinoite.
 == Documents
 
 * link:{attachmentsdir}/flatpak-print-cheatsheet.pdf[Flatpak Cheat Sheet] - PDF with common flatpak commands
-* link:{attachmentsdir}/silverblue-cheatsheet.pdf[rpm-ostree Cheat Sheet] - PDF with common rpm-ostree commands (initial made for Silverblue but also applies to Kinoite)
+* link:{attachmentsdir}/silverblue-cheatsheet.pdf[rpm-ostree Cheat Sheet] - PDF with common rpm-ostree commands (initial made for Silverblue but also applies to {variant-name})
 * link:{attachmentsdir}/container-commandos.pdf[Container commandos] -  a playful introduction to tools such as podman, cri-o and buildah by Máirín Duffy and Dan Walsh. Print it out, and learn as you color!

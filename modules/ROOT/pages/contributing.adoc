@@ -1,12 +1,12 @@
 [[contributing]]
-= Contributing to Fedora Kinoite
+= Contributing to Fedora {variant-name}
 
-Help us improve Fedora Kinoite by contributing to the project!
+Help us improve Fedora {variant-name} by contributing to the project!
 
 [[developing]]
-== Developing Kinoite
+== Developing {variant-name}
 
-If you are a developer, you can contribute to one of the several projects which make Fedora Kinoite possible. Submit your pull requests to:
+If you are a developer, you can contribute to one of the several projects which make Fedora {variant-name} possible. Submit your pull requests to:
 
 * https://github.com/projectatomic/rpm-ostree[rpm-ostree]
 * https://github.com/flatpak/flatpak[flatpak]
@@ -19,9 +19,9 @@ Your contributions towards the main https://fedoraproject.org/wiki/Join[Fedora] 
 [[writing-documentation]]
 == Writing Documentation
 
-Creating or modifying documentation is easy. Head over to our https://pagure.io/fedora-kde/kinoite-docs[documentation] repository, fork it and create a pull request.
+Creating or modifying documentation is easy. Head over to our {docs-src}[documentation] repository, fork it and create a pull request.
 
-If you are not comfortable with using git, create a new topic in our https://discussion.fedoraproject.org/c/desktop/kinoite[community] or log an https://pagure.io/fedora-kde/kinoite-docs/issues[issue] describing what need to be changed.
+If you are not comfortable with using git, create a new topic in our {discussion-forum}[community] or log an {docs-issue}[issue] describing what need to be changed.
 
 [[writing-conventions]]
 === Writing Conventions
@@ -39,7 +39,7 @@ The `$` user prompt symbol can also be used but you must prefix the command with
 [[reporting-issues]]
 == Reporting Issues
 
-You can report bugs and suggest features or improvements on the https://pagure.io/fedora-kde/SIG[KDE SIG issue tracker].
+You can report bugs and suggest features or improvements on the {issue-tracker}[KDE SIG issue tracker].
 
 [[creating-flatpaks]]
 == Creating Flatpaks

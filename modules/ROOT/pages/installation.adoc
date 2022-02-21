@@ -1,6 +1,6 @@
-= Installing Kinoite
+= Installing {variant-name}
 
-Fedora Kinoite can be installed in the same way as Fedora Workstation, and the
+Fedora {variant-name} can be installed in the same way as Fedora Workstation, and the
 official Fedora installation guide can be followed for your Fedora version.
 See the https://docs.fedoraproject.org/en-US/docs/[Fedora documentation site]
 for more details.
@@ -12,21 +12,21 @@ As with installing any new operating system, it is important to back up any
 data that you want to save before starting, and have a clear understanding of
 the consequences of what you are doing.
 
-Kinoite is intended to provide the full range of capabilities that you would
+{variant-name} is intended to provide the full range of capabilities that you would
 expect from an installation of Fedora Workstation. However, there are some
 differences in terms of which applications can be installed, and how the
 operating system environment works.
 
 It is therefore recommended that you read this user guide before deciding to
-install Kinoite. It is also recommended that you determine whether Kinoite
+install {variant-name}. It is also recommended that you determine whether {variant-name}
 meets the specific needs or requirements that you might have. If you are
-uncertain about this, Kinoite can also be tested in a virtual machine prior to
+uncertain about this, {variant-name} can also be tested in a virtual machine prior to
 installation or booted from a flash drive using Fedora Media Writer.
 
 [[known-bugs]]
 == Known bugs
 
-Fedora Kinoite is considered stable since its first release as part of Fedora
+Fedora {variant-name} is considered stable since its first release as part of Fedora
 35. However it is not complete and there are still some features missing to
 make using it a great user experience.
 
@@ -37,28 +37,28 @@ a new one if you find something missing or broken.
 [[known-limitations]]
 == Known limitations
 
-*Kinoite does not provide a fully functional experience for dual booting or
+*{variant-name} does not provide a fully functional experience for dual booting or
 manual partitioning.*
 
-It is possible to make Kinoite work for both dual boot and manual partitioning,
+It is possible to make {variant-name} work for both dual boot and manual partitioning,
 and some guidance is provided on manual partitioning below. However, there are
 hazards involved in both cases, and you should only attempt to use these
 features if you have done the necessary research, and are confident that you
 can overcome any issues that you might encounter.
 
 [[getting-kinoite]]
-== Getting Kinoite
+== Getting {variant-name}
 
 You can download the installation images from
-https://kinoite.fedoraproject.org/[the main Kinoite website].
+{website}[the main {variant-name} website].
 
-Once you have got your copy of Kinoite, it can be installed in the usual
+Once you have got your copy of {variant-name}, it can be installed in the usual
 manner. You can use Fedora Media Writer to write your ISO to an installation
 media. See the
 https://docs.fedoraproject.org/en-US/quick-docs/creating-and-using-a-live-installation-image/index.html#proc_creating-and-using-live-usb[Fedora
 documentation pages].
 
-Direct support for Fedora Kinoite in the Fedora Media Writer is
+Direct support for Fedora {variant-name} in the Fedora Media Writer is
 https://github.com/FedoraQt/MediaWriter/issues/364[planned].
 
 We hope that you love it!
@@ -66,30 +66,30 @@ We hope that you love it!
 [[manual-partition]]
 == Manual Partitioning
 
-As described above, there are known issues with manual partitioning on Kinoite,
+As described above, there are known issues with manual partitioning on {variant-name},
 and it should be used with caution. The following notes are intended as hints
 for those attempting it, and should not be treated as recommended practice.
 Automatic partitioning is recommended.
 
-With Kinoite, only certain mounts can be manually specified as partitions.
+With {variant-name}, only certain mounts can be manually specified as partitions.
 These include:
 
 * `/boot`
 * `/var`
 * Subdirectories under `/var`, including:
-** `/var/home` (Kinoite has a symlink from `/home` to `/var/home`)
+** `/var/home` ({variant-name} has a symlink from `/home` to `/var/home`)
 ** `/var/log`
 ** `/var/containers`
 * The root filesystem: `/`
 
 The Fedora installer is not aware of these restrictions and will accept custom
-partitions without error, even if they are incompatible with Kinoite.
+partitions without error, even if they are incompatible with {variant-name}.
 
 image::faw-manual-partition-complete.png[title="Partitioning Complete"]
 
 The above screenshot shows a typical configuration with manual partitioning,
 with partitions for `/boot`, `/`, `swap` and `/var/home`.
 
-Manual partitioning on Kinoite can be done with `Btrfs`,
+Manual partitioning on {variant-name} can be done with `Btrfs`,
 https://en.wikipedia.org/wiki/Logical_Volume_Manager_%28Linux%29[LVM], as well
 as standard partitions or an `xfs` filesystem.

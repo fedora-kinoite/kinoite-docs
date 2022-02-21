@@ -2,18 +2,18 @@
 
 == About the project
 
-Why is this project named Kinoite?::
+Why is this project named {variant-name}?::
 
 We chose the Kinoite name for the following reasons:
 * KDE based projects traditionally start with a 'K'
 * Kinoite is a blue mineral (https://en.wikipedia.org/wiki/Kinoite[Wikipedia]), thus referring to both the 'silver' and 'blue' part of Silverblue and the blue color of the KDE logo.
 * "Kinoite" means "There is a tree" in Japanese (https://translate.google.com/?sl=auto&tl=en&text=kinoite&op=translate[Google Translate]), thus referring to the 'tree' in 'ostree'.
 
-What is Fedora Kinoite's relationship with Fedora Silverblue, Fedora IoT and Fedora CoreOS?::
+What is Fedora {variant-name}'s relationship with Fedora Silverblue, Fedora IoT and Fedora CoreOS?::
 
-Fedora Kinoite uses the same core technology as Fedora Silverblue, Fedora IoT and Fedora CoreOS. However, Kinoite is specifically focused on workstation/desktop use cases with the KDE Plasma desktop.
+Fedora {variant-name} uses the same core technology as Fedora Silverblue, Fedora IoT and Fedora CoreOS. However, Kinoite is specifically focused on workstation/desktop use cases with the KDE Plasma desktop.
 
-== About using Kinoite
+== About using {variant-name}
 
 How can I play more videos in Firefox, like YouTube?::
 
@@ -53,7 +53,7 @@ At this point in time, there is no `rpm` package search function built into `rpm
 
  $ toolbox run dnf search <package>
 +
-NOTE: The assumption is that you have already created a toolbox matching the version of your Fedora Kinoite installation.
+NOTE: The assumption is that you have already created a toolbox matching the version of your Fedora {variant-name} installation.
 
 How can I downgrade my system's kernel?::
 
@@ -81,7 +81,7 @@ NOTE: `0` here refers to the first deployment listed by `rpm-ostree status`
 
  rpm-ostree status
 
-. After the deployment is pinned, you can upgrade your system by using the instructions found https://docs.fedoraproject.org/en-US/fedora-kinoite/updates-upgrades-rollbacks/#upgrading[here].
+. After the deployment is pinned, you can upgrade your system by using the instructions found {docs-url}/updates-upgrades-rollbacks/#upgrading[here].
 
 . When you have completed rebasing, reboot the system. The GRUB menu will now present you with both: the previous deployment major version entry (e.g.: *"Fedora 30.YYYYMMDD.n"*) and the new deployment major version entry (e.g.: *"Fedora 31.YYYYMMDD.n"*).
 +
