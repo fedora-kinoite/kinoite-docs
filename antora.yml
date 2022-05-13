@@ -25,6 +25,7 @@ asciidoc:
   attributes:
     variant: kinoite
     variant-name: Kinoite
+    version: 36
     website: https://kinoite.fedoraproject.org/
     issue-tracker: https://pagure.io/fedora-kde/SIG/issues
     docs-url: https://docs.fedoraproject.org/en-US/fedora-kinoite/
